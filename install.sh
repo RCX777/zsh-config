@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-ZDOTDIR=$HOME/.config/zsh
+ZHOME=${1:-$HOME}
+
+ZDOTDIR=$ZHOME/.config/zsh
 
 mkdir -p $ZDOTDIR
-cp ./zshrc $HOME/.zshrc
-cp ./p10k.zsh $HOME/.p10k.zsh
+cp ./zshrc $ZHOME/.zshrc
+cp ./p10k.zsh $ZHOME/.p10k.zsh
 cp ./aliases.zsh $ZDOTDIR/
 
