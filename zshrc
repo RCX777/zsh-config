@@ -17,7 +17,7 @@ SAVEHIST=10000
 mkdir -p ${XDG_STATE_HOME}/zsh
 HISTFILE=${XDG_STATE_HOME}/zsh/zsh_history
 
-[ -f ~/.config/zsh/zsh-aliases ] &&\
+[ -f ~/.config/zsh/aliases.zsh ] &&\
     source ~/.config/zsh/aliases.zsh
 
 [ ! -d ${XDG_DATA_HOME}/zsh/zsh-autosuggestions ] &&\
