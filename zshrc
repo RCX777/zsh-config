@@ -40,7 +40,7 @@ source ${XDG_DATA_HOME}/zsh/zsh-history-substring-search/zsh-history-substring-s
               ${XDG_DATA_HOME}/zsh/zsh-fzf-history-search
 source ${XDG_DATA_HOME}/zsh/zsh-fzf-history-search/zsh-fzf-history-search.zsh
 
-[ ! -f ${XDG_DATA_HOME}/zsh/powerlevel10k ] &&\
+[ ! -d ${XDG_DATA_HOME}/zsh/powerlevel10k ] &&\
     git clone https://github.com/romkatv/powerlevel10k \
               ${XDG_DATA_HOME}/zsh/powerlevel10k
 source ${XDG_DATA_HOME}/zsh/powerlevel10k/powerlevel10k.zsh-theme
