@@ -21,27 +21,27 @@ HISTFILE=${XDG_STATE_HOME}/zsh/zsh_history
     source ~/.config/zsh/aliases.zsh
 
 [ ! -d ${XDG_DATA_HOME}/zsh/zsh-autosuggestions ] &&\
-    git clone https://github.com/zsh-users/zsh-autosuggestions \
+    git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions \
               ${XDG_DATA_HOME}/zsh/zsh-autosuggestions
 source ${XDG_DATA_HOME}/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [ ! -d ${XDG_DATA_HOME}/zsh/zsh-syntax-highlighting ] &&\
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting \
+    git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting \
               ${XDG_DATA_HOME}/zsh/zsh-syntax-highlighting
 source ${XDG_DATA_HOME}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ ! -d ${XDG_DATA_HOME}/zsh/zsh-history-substring-search ] &&\
-    git clone https://github.com/zsh-users/zsh-history-substring-search \
+    git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search \
               ${XDG_DATA_HOME}/zsh/zsh-history-substring-search
 source ${XDG_DATA_HOME}/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 [ ! -d ${XDG_DATA_HOME}/zsh/zsh-fzf-history-search ] &&\
-    git clone https://github.com/joshskidmore/zsh-fzf-history-search \
+    git clone --depth 1 https://github.com/joshskidmore/zsh-fzf-history-search \
               ${XDG_DATA_HOME}/zsh/zsh-fzf-history-search
 source ${XDG_DATA_HOME}/zsh/zsh-fzf-history-search/zsh-fzf-history-search.zsh
 
 [ ! -d ${XDG_DATA_HOME}/zsh/powerlevel10k ] &&\
-    git clone https://github.com/romkatv/powerlevel10k \
+    git clone --depth 1 https://github.com/romkatv/powerlevel10k \
               ${XDG_DATA_HOME}/zsh/powerlevel10k
 source ${XDG_DATA_HOME}/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
