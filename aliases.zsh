@@ -10,3 +10,5 @@ alias ll="lsd -l"
 alias la="lsd --almost-all"
 alias l="lsd -l --almost-all"
 
+alias tmux="SHELL=$(which zsh) tmux"
+
