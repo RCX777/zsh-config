@@ -61,5 +61,6 @@ source ${XDG_DATA_HOME}/zsh/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# eval "$(zoxide init zsh)"
+command -v uv > /dev/null && eval "$(uv generate-shell-completion zsh)"
+command -v zoxide > /dev/null && eval "$(zoxide init zsh)"
 
