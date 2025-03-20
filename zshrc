@@ -11,6 +11,19 @@ export XDG_DATA_HOME="${HOME}/.local/share"; mkdir -p ${XDG_DATA_HOME}
 export XDG_STATE_HOME="${HOME}/.local/state"; mkdir -p ${XDG_STATE_HOME}
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
+mkdir -p "$HOME/.local/bin"
+
+# Add binaries to PATH if they aren't added yet
+# Affix colons on either side of $PATH to simplify matching
+case ":${PATH}:" in
+    *:"$HOME/.local/bin":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed binary needs to be overridden
+        export PATH="$HOME/.local/bin:$PATH"
+        ;;
+esac
+
 # Keep 10000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=10000
 SAVEHIST=10000
