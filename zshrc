@@ -63,4 +63,5 @@ source ${XDG_DATA_HOME}/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 command -v uv > /dev/null && eval "$(uv generate-shell-completion zsh)"
 command -v zoxide > /dev/null && eval "$(zoxide init zsh)"
+command -v direnv > /dev/null && eval "$(direnv hook zsh)"
 
