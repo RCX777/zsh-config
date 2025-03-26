@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+bindkey '^[[1;3C' forward-word
+bindkey '^[[1;3D' backward-word
+
 export XDG_CONFIG_HOME="${HOME}/.config"; mkdir -p ${XDG_CONFIG_HOME}
 export XDG_CACHE_HOME="${HOME}/.cache"; mkdir -p ${XDG_CACHE_HOME}
 export XDG_DATA_HOME="${HOME}/.local/share"; mkdir -p ${XDG_DATA_HOME}
