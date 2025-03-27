@@ -17,12 +17,12 @@ if command -v "lsd" > /dev/null; then
 else
     alias ll="ls -lh"
     alias la="ls -a"
-    alias l="lsd -alh"
+    alias l="ls -alh"
 fi
 
 if command -v "zoxide" > /dev/null; then
     alias cd="z"
 fi
 
-alias tmux="SHELL=$(which zsh) tmux"
+alias tmux="SHELL=$(which zsh) tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
 
