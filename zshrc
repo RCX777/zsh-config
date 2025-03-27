@@ -16,6 +16,8 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 mkdir -p "$HOME/.local/bin"
 
+source ${XDG_CONFIG_HOME}/zsh/env.zsh
+
 # Add binaries to PATH if they aren't added yet
 # Affix colons on either side of $PATH to simplify matching
 case ":${PATH}:" in
