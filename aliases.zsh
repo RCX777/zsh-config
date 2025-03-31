@@ -24,5 +24,7 @@ if command -v "zoxide" > /dev/null; then
     alias cd="z"
 fi
 
+alias ssh="TERM=xterm-256color ssh"
+
 alias tmux="SHELL=$(which zsh) tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
 
