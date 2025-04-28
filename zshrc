@@ -66,7 +66,19 @@ source ${XDG_DATA_HOME}/zsh/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-command -v uv > /dev/null && eval "$(uv generate-shell-completion zsh)"
-command -v zoxide > /dev/null && eval "$(zoxide init zsh)"
-command -v direnv > /dev/null && eval "$(direnv hook zsh)"
+autoload -U +X compinit && compinit
+
+command -v uv &> /dev/null && eval "$(uv generate-shell-completion zsh)"
+command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
+command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
+
+if command -v pyenv &> /dev/null; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+fi
+
+[ -f ${XDG_CONFIG_HOME}/zsh/ssh-agent-setup.sh ] &&\
+    source ${XDG_CONFIG_HOME}/zsh/ssh-agent-setup.sh
 
